@@ -17,7 +17,7 @@ EXPENSES = [
 
 
 
-@app.get("/expenses", response_model=list[ExpenseWithID])
+@app.get("/expenses", response_model=list[ExpenseWithID])# The response_model parameter specifies that the endpoint will return a list of ExpenseWithID objects. FastAPI will automatically convert the returned data into the specified format and validate it against the model.
 async def get_expenses():
   expenses = [ExpenseWithID(id=i+1, **b) for i, b in enumerate(EXPENSES)]
   return expenses
