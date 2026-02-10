@@ -7,7 +7,7 @@ export type Category =
   | "Health" 
   | "Other";
 
-export type PaymentMethod = "cash" | "card" | "online";
+export type PaymentMethod = "Cash" | "Card" | "Online";
 
 export interface Expense {
   id: number;
@@ -70,9 +70,9 @@ export const CATEGORIES: Category[] = [
 ];
 
 export const PAYMENT_METHODS: { value: PaymentMethod; label: string }[] = [
-  { value: "cash", label: "Cash" },
-  { value: "card", label: "Card" },
-  { value: "online", label: "Online" }
+  { value: "Cash", label: "Cash" },
+  { value: "Card", label: "Card" },
+  { value: "Online", label: "Online" }
 ];
 
 export const CATEGORY_COLORS: Record<Category, string> = {
