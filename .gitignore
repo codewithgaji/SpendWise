@@ -2,3 +2,7 @@ spendwisebackend/.env
 spendwisebackend/__pycache__/
 spendwisefrontend/node_modules/
 spendwisefrontend/build/
+
+.pyc
+.env.*
+venv

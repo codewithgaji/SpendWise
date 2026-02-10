@@ -8,17 +8,17 @@ interface PaymentMethodBadgeProps {
 }
 
 const methodConfig: Record<PaymentMethod, { icon: typeof CreditCard; label: string; className: string }> = {
-  cash: {
+  Cash: {
     icon: Banknote,
     label: "Cash",
     className: "bg-emerald-100 text-emerald-800 dark:bg-emerald-900 dark:text-emerald-200",
   },
-  card: {
+  Card: {
     icon: CreditCard,
     label: "Card",
     className: "bg-indigo-100 text-indigo-800 dark:bg-indigo-900 dark:text-indigo-200",
   },
-  online: {
+  Online: {
     icon: Globe,
     label: "Online",
     className: "bg-cyan-100 text-cyan-800 dark:bg-cyan-900 dark:text-cyan-200",
