@@ -31,7 +31,7 @@ class ExpenseBase(BaseModel):
 
 
 class ExpenseCreate(ExpenseBase):
-  id: int
+  # id: int
   @validator("category", pre=True)
   def category_validator(cls, value):
     return value.title() # This gets the value of the category field and converts it to title case (first letter capitalized) before validation. This allows for case-insensitive input while ensuring that the stored value is consistently formatted.
