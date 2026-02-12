@@ -97,8 +97,8 @@ async def create_expense(expense: ExpenseCreate):
   return HTTPException(status_code=201, detail="Expense created successfully")
 
 
-@app.put("/expenses")
-def update_expenses(id: int, new_expenses: ExpenseCreate):
+@app.put("/expenses/{id}")
+async def update_expenses(id: int, new_expenses: ExpenseCreate):
   for expense in EXPENSES:
     data = new_expenses.model_dump()
     if expense['id'] == id:
@@ -108,6 +108,19 @@ def update_expenses(id: int, new_expenses: ExpenseCreate):
       expense['expense_date'] = str(data['expense_date'])
       expense['description'] = data['description']
       expense['payment_method'] = data['payment_method']
+      return {"Detail" : "Expense Updated Successfully"}
+  raise HTTPException(status_code=400, detail="Expense Failed to update")
 
-  return HTTPException(status_code=200, detail="Expense updated successfully")
+
+
+
+
+@app.delete("/expenses/{id}")
+def delete_expense(id: int):
+  for i, expense in enumerate(EXPENSES):
+    if expense["id"] == id:
+      del EXPENSES[i]
+      return {"Detail": "Expense Deleted Successfully"}
+    
+  raise HTTPException(status_code=404, detail=f"Expense {id} Not found")
 

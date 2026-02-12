@@ -72,3 +72,19 @@ def update_expenses(id: int, new_expenses: ExpenseCreate):
   print(data.keys())
 
 update_expenses(5, ExpenseCreate(title="Test", amount=100, category="Food", description="Test description", payment_method="Card"))
+
+print("")
+print("")
+
+id = int(input("Enter Id: "))
+
+for i, expense in enumerate(EXPENSES):
+  print(EXPENSES)
+  print("")
+  if expense["id"] == id:
+    del EXPENSES[i] # Whenever we delete an expense, we need to use the index of the expense in the list of expenses to delete it. This is because we cannot delete an expense by its id, we need to delete it by its index in the list of expenses.
+    print("Expense Deleted Successfully")
+    print("")
+    print(EXPENSES)
+    
+
