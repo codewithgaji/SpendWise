@@ -69,6 +69,9 @@ EXPENSES = [
 
 
 
+
+
+
 @app.get("/expenses")# The response_model parameter specifies that the endpoint will return a list of ExpenseWithID objects. FastAPI will automatically convert the returned data into the specified format and validate it against the model.
 async def get_expenses():
   return EXPENSES
