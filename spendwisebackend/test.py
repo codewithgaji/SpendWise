@@ -71,7 +71,7 @@ def update_expenses(id: int, new_expenses: ExpenseCreate):
   data = new_expenses.model_dump()
   print(data.keys())
 
-update_expenses(5, ExpenseCreate(title="Test", amount=100, category="Food", description="Test description", payment_method="Card"))
+update_expenses(5, ExpenseCreate(title="Test", amount=100, category="Food", description="Test description", payment_method="Transfer", date="2026-02-12")) # This is just a test to check if the data is being passed correctly to the function and if we can access it.
 
 print("")
 print("")

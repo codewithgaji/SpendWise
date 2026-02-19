@@ -87,8 +87,6 @@ def get_expense_with_id(expense_id: int):
   # for expense in EXPENSES:
   #   if expense["id"] == expense_id:
   #     return expense
-    
-
 
 
 @app.post("/expenses")
@@ -116,8 +114,6 @@ async def update_expenses(id: int, new_expenses: ExpenseCreate):
 
 
 
-
-
 @app.delete("/expenses/{id}")
 def delete_expense(id: int):
   for i, expense in enumerate(EXPENSES):
@@ -125,5 +121,5 @@ def delete_expense(id: int):
       del EXPENSES[i]
       return {"Detail": "Expense Deleted Successfully"}
     
-  raise HTTPException(status_code=404, detail=f"Expense {id} Not found")
+  raise HTTPException(status_code=404, detail=f"Expense {id} Not found") 
 
