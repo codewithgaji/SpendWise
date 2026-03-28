@@ -3,6 +3,7 @@ from sqlalchemy.ext.declarative import declarative_base
 
 Base = declarative_base()
 
+# This is the database model for the expense table.
 class Expense(Base):
     __tablename__ = "expenses"
 

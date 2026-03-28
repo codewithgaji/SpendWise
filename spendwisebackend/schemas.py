@@ -14,6 +14,7 @@ class Category(str, Enum):
   HEALTH = "Health"
   OTHER = "Other"
 
+# Schemas for payment method
 class PaymentMethod(str, Enum):
   CASH = "Cash"
   CARD = "Card"
