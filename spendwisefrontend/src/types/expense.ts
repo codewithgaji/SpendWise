@@ -9,6 +9,8 @@ export type Category =
 
 export type PaymentMethod = "Cash" | "Card" | "Online";
 
+
+// This file contains all the types related to expenses.
 export interface Expense {
   id: number;
   title: string;

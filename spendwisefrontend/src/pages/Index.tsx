@@ -19,6 +19,7 @@ import { MonthlySummary } from "@/components/expenses/MonthlySummary";
 import { DeleteConfirmDialog } from "@/components/expenses/DeleteConfirmDialog";
 import { Plus, Wallet } from "lucide-react";
 
+// This is used to filter the Search.
 const Index = () => {
   const [filters, setFilters] = useState<FilterType>({
     search: "",
